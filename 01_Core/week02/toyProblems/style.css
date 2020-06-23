@@ -1,1 +1,47 @@
 /* CSS Style Sheet for W2 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 20px;
+    padding: 10px;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: rgb(18, 124, 124);
+}
+
+#sidebar {
+    float: right;
+    width: 200px;
+    position: relative;
+    padding: 10px 10px 10px;
+    margin: 50px 10px 10px;
+    border: solid 2px black;
+    background: rgb(15, 6, 151);
+}
+
+#main {
+        background: rgb(18, 124, 124);
+    width: 700px;
+    margin: 20px auto;
+}
+
+#color-list {
+    background-color: rgb(148, 10, 175);
+    text-indent: 20px;
+}
+
+.footer {
+    background: rgb(15, 6, 151);
+    margin: 20px;
+    padding: 20px;
+    border: solid 2px black;
+}
+
+hr {
+    margin: 10px;
+}
+
+
