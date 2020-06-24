@@ -3,3 +3,8 @@ const testFunc = () => {
 }
 
 testFunc();
+
+const submitForm = () => {
+    event.preventDefault();
+    console.log('Do I work?')
+}

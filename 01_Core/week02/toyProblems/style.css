@@ -12,6 +12,14 @@ body {
     background-color: rgb(18, 124, 124);
 }
 
+#contact-page {
+    margin: 50px;
+    padding: 10px;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: rgb(18, 124, 124);
+    text-align: center;
+}
+
 #sidebar {
     float: right;
     width: 200px;
@@ -22,15 +30,96 @@ body {
     background: rgb(15, 6, 151);
 }
 
-#main {
-        background: rgb(18, 124, 124);
+h1, h2, h3, h4 {
+    margin: 5px;
+    padding: 5px
+}
+
+#form-style {
+    background: rgb(15, 6, 151);
+}
+
+#contact-header {
+    display: inline;
+    margin: 5px auto;
+    text-align: center;
+}
+
+header nav {
+    text-align: center;
+ }
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    line-height: 40px;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.form {
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.form-input {
+    text-align: left;
+    padding: 20px 5px 5px 178px;
+}
+
+/* #favorite-sport {
+    text-align: left;
+    padding: 0 0 0 178px;
+}
+
+#toppings {
+    text-align: left;
+    padding: 0 0 0 178px;
+} */
+
+.main {
+    background: rgb(18, 124, 124);
     width: 700px;
     margin: 20px auto;
 }
 
-#color-list {
-    background-color: rgb(148, 10, 175);
+.color-list {
+    background-color: black;
     text-indent: 20px;
+}
+
+#red {
+    color: red;
+}
+
+#orange {
+    color: orange;
+}
+
+#yellow {
+    color: yellow;
+}
+
+#green {
+    color: green;
+}
+
+#blue {
+    color: blue;
+}
+
+#indigo {
+    color: indigo;
+}
+
+#violet {
+    color: violet
 }
 
 .footer {

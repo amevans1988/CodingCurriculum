@@ -1,5 +1,5 @@
 VERY EASY: Create a bulleted list of the colors of the rainbow
-
+ 
 EASY: Create an HTML page with a main headline, two subheads in their own sections and supporting text for each subhead. Topic is up to you. Make sure you have a page title.
 
 MEDIUM: Using semantic HTML, add a footer with a copyright year and social media links (minimum of 3). Add a sidebar with links to outside content.
