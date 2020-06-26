@@ -2,9 +2,10 @@
 
 <html>
     <head>
-        <title>Artie's P1 W2 Toy Problems</title>
+        <title>Contact List</title>
 
         <link href='style.css' rel='stylesheet'>
+
     </head>
     <body>
         <header class='contact-header'>
@@ -25,48 +26,31 @@
 
         </header>
 
-        
-        <div id='sidebar'>
-            <h3>Our Favorite Search Engines!</h3>
-            <p><a href='https://www.google.com'>Google</a></p>
-            <p><a href='https://www.yahoo.com'>Yahoo</a></p>
-            <p><a href='https://www.bing.com'>Bing (don't click this one)</a></p>
-            <br>
-            <p><a href='contact.html'><strong>Contact Us</strong></a></p>
-            <p><a href='contact-list.html'><strong>Contact List</strong></a></p>
-        </div>
-
-        <div class='main'>
-
-            <h1>Artie's Phase 1 Week 2 Toy Problems</h1>
-
+        <div class='contact-main'>
+            <h1>Master Contact List</h1>
+            
             <hr>
 
-            <h2>Current Mental Status:</h2>
-            <p>Questionable. But I'm totally learning...</p>
+            <div id='contact-table'>
+                <table>
+                    <tr>
+                        <th id='firstName'>Last Name</th>
+                        <th id='lastName'>First Name</th>
+                    </tr>
+                    <tr><td id='fromJS'></td></tr>
 
-            <hr>
+                </table>
+                <hr>
 
-            <h2>Daily Time Allocation</h2>
-            <p>Code, phones, code, sleep. Mix in some food somewhere.</p>
-
-            <hr>
-
-            <h3>Colors of the Rainbow!</h3>
-            <div class='color-list'>
-                <ul>
-                    <li id='red'>Red</li>
-                    <li id='orange'>Orange</li>
-                    <li id='yellow'>Yellow</li>
-                    <li id='green'>Green</li>
-                    <li id='blue'>Blue</li>
-                    <li id='indigo'>Indigo</li>
-                    <li id='violet'>Violet</li>
-                </ul>
             </div>
 
-        </div> <!--end main-->`
+            <div id='nameInput'>
+                <input type='text' placeholder='John Smith,Jane Doe'>
+                <br><br>
+                <input id='addName' type='submit' onclick='return addName()'>
+            </div>
 
+        </div><!-- end main-->
 
         <footer class='footer'>
             <p>&copy; 2020 Arthur McLean Evans</p>
@@ -76,7 +60,7 @@
                 <li><a href='https://www.instagram.com'>Instagram</a></li>
             </ul>
         </footer>
+
     </body>
     <script src='script.js'></script>
 </html>
-
