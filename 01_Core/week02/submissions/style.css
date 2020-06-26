@@ -17,17 +17,46 @@ a:hover {
 color: red;
 }
 
-
-
-.dropContent {
+.partnerDrop {
     display: none;
-    text-align: left;
-    text-indent: -15px;
+    position: absolute;
+    list-style: inside;
+    background: blue;
+    border-radius: 8px;
+    border: solid 1px black;
+    width: 131.6px;
+    margin-left: -20px;
+    /* padding: 0 20px;
+    margin: 0px 35px; */
 }
 
-.partnerHover:hover .dropContent{
+.socialDrop {
+    display: none;
+    position: absolute;
+    list-style: inside;
+    background: blue;
+    border-radius: 8px;
+    border: solid 1px black;
+    width: 91.6px;
+    margin-left: -20px;
+    /* padding: 0 20px;
+    margin: 0px 35px; */
+}
+
+
+.partnerHover {
+    position: relative;
+}
+
+.partnerHover:hover .partnerDrop {
     display: block;
 }
+
+.partnerHover:hover .socialDrop {
+    display: block;
+}
+
+
 
 body {
     margin: 20px;
@@ -52,7 +81,7 @@ body {
     padding: 10px 10px 10px;
     margin: 50px 10px 10px;
     border: solid 2px black;
-    background: rgb(15, 6, 151);
+    background: blue;
 }
 
 h1, h2, h3, h4 {
@@ -61,7 +90,7 @@ h1, h2, h3, h4 {
 }
 
 #form-style {
-    background: rgb(15, 6, 151);
+    background: blue;
 }
 
 .contact-header {
@@ -83,6 +112,7 @@ header nav ul {
 
 header nav ul li {
     background: blue;
+    border-radius: 8px;
     border: solid 1px black;
     display: inline-block;
     padding: 0 20px;
@@ -119,6 +149,7 @@ header nav ul li {
 .color-list {
     background-color: black;
     text-indent: 20px;
+    border: solid 2px blue;
 }
 
 #red {
@@ -161,7 +192,7 @@ hr {
 }
 
 #contact-table {
-    width: 100%;
+    width: 280px;
     padding: 10px;
 }
 
@@ -177,7 +208,8 @@ table {
 
 th {
     height: 50px;
-    padding: 0 10px 0 10px;
+    padding: 0;
+    width: 300px;
 }
 
 tr {
@@ -186,7 +218,15 @@ tr {
 }
 
 td {
-    text-indent: 10px;
+    text-align: left;
+}
+
+.tableEntries {
+    padding: 4px;
+}
+
+.deleteButtonEntries {
+    padding: 3px;
 }
 
 #nameInput {
@@ -204,6 +244,24 @@ td {
 }
 
 .last-names {
+    width: 300px;
     color: red;
     font-weight: 800;
+}
+
+#lastName {
+    width: 300px;
+}
+
+#firstName {
+    width: 300px;
+}
+
+.delete-button {
+    text-align: right;
+}
+
+#deleteIcon {
+    vertical-align: middle;
+    margin: 0px 0px;
 }

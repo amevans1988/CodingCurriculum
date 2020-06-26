@@ -1,100 +1,119 @@
-var nameInput, fullName, nameID;
+// Dynamic contact list - This was a lot of fun.
 
-var tableHTML = document.querySelector('#fromJS');
-var splitName = [];
-var nameArr = [];
-var namesLastFirst = [];
-var currentName = [];
-var lastNames = [];
-var firstNames = [];
+// No multiple names
 
-document.querySelector("#nameInput > input[type=text]:nth-child(1)").addEventListener('keyup', function(event) {
-    if (event.keyCode === 13) {
-        addName();
-    }
-});
+var tableLast = document.querySelector('#lastJS');
+var tableFirst = document.querySelector('#firstJS');
+var tableDelete = document.querySelector('#deleteJS');
+var nameInput;
+var fullNames = null;
 
 function updateTable(nameInput) {
 
-    // 1 Get values from input
+    // 1 Get values from input and separates them by the comma. If there are existing elements in the contact table, add to list.
+    getValues();
+
+    // 2 Split the full name(s) and assign them last then first in an array
+    createNLF();
+
+    // 3 Sort the array as alphabetical by last name
+    sortNLF();
+
+    // 4 Clear the current first and last names array and clear table html
+    resetTable();
+
+    // 5 With the array sorted by last name, take all current elements and split them into their first and last names while assigning an identical index in both arrays
+    createFirstAndLast();
+
+    // 6 Based on the updated lastNames array, assigns 3 cells for each element in one row - last name from the looping array, first name with identical index, and then add a delete button assigned an id equal to that index.
+    addTable();
+}
+
+const addName = () => { 
+    event.preventDefault();
+    nameInput = document.querySelector('#textInput').value;
+    updateTable(nameInput);
+    document.querySelector('#textInput').value = '';
+}
+
+const deleteName = (index) => {
+    var indexToDelete = (fullNames.indexOf(`${firstNames[index]} ${lastNames[index]}`));
+    fullNames.splice(indexToDelete, 1)
+    nameInput = '';
+    createNLF();
+    sortNLF();
+    resetTable();
+    createFirstAndLast();
+    addTable();
+}
+
+const getValues = () => {
     if (nameInput === '') {
         alert('At least one name is required.');
     } else if (nameInput.includes(', ')) {
         alert('Please do not add a space after each comma.')
+    } else if (nameInput.indexOf(' ') >= 0) {
+        if (fullNames === null) {
+            fullNames = nameInput.split(',');
+        } else {
+            // If contact list already exists and you want to add multiple names
+            if (nameInput.includes(',')) {
+                addMultipleNames = nameInput.split(',')
+                for (i = 0; i < addMultipleNames.length; i++) {
+                    fullNames.push(addMultipleNames[i]);
+                }
+            // If just adding one name to an existing contact list
+            } else {
+                fullNames.push(nameInput)
+            }
+        }
+    // If the text entry does not contain at least one space
     } else {
-        fullNames = nameInput.split(',');
+        alert('Please include a space between first and last name.')
     }
+}
 
-    // 2 Split the full name
+const createNLF = () => {
+    namesLastFirst = [];
     for (i = 0; i < fullNames.length; i++) {
         splitName = fullNames[i].split(' ');
         namesLastFirst.push(`${splitName[1]} ${splitName[0]}`);
     }
+}
 
-    // 3 Sort the array so so last name will be alphabetical
-    namesLastFirst.sort()
+const sortNLF = () => {
+    namesLastFirst.sort();
+}
 
-    // 4 clear the current names array and html
+const resetTable = () => {
     lastNames = [];
     firstNames = [];
-    tableHTML.innerHTML = '';
+    tableLast.innerHTML = '';
+    tableFirst.innerHTML = '';
+    tableDelete.innerHTML = '';
+}
 
-    // 5 Split the namesLastFirst and add to separate arrays with the same index
+const createFirstAndLast = () => {
     for (i = 0; i < namesLastFirst.length; i++) {
         currentName = namesLastFirst[i].split(' ');
         lastNames.push(currentName[0])
         firstNames.push(currentName[1]);
         currentName = [];
     }
+}
 
-    // 6 Add names to the table
-    for (i = 0; i < firstNames.length; i++) {
-        tableHTML.innerHTML += `<p><span class='last-names'>${lastNames[i]}</span> ${firstNames[i]}</p>`
+const addTable = () => {
+    for (i = 0; i < lastNames.length; i++) {
+        // If multiple names were added, and one or more of the strings between each comma does not contain a space, it will alert the user and delete that item from all arrays.
+        if (lastNames[i] === `undefined` || firstNames[i] === `undefined`) {
+            alert(`Invalid entry: "${firstNames[i]}". Please add a space between the first and last name. Not added to contact list.`);
+            deleteName(i);
+            // if multiple invalid entries, it will continue to loop and alert for each invalid.
+            i++;
+        } else {
+            tableLast.innerHTML += `<p class='tableEntries'><span class='last-names'>${lastNames[i]}</span></p>`;
+            tableFirst.innerHTML += `<p class='tableEntries'>${firstNames[i]}</p>`;
+            tableDelete.innerHTML += `<p class='deleteButtonEntries'><span class='delete-button'><button id=${i} onClick=deleteName(${i})><img id='deleteIcon' src="images/delete.png" width="15" height="15"></span></p>`;
+        }
     }
 }
-
-const addName = () => { 
-    event.preventDefault();
-    nameInput = document.querySelector("#nameInput > input[type=text]:nth-child(1)").value
-    updateTable(nameInput);
-    document.querySelector("#nameInput > input[type=text]:nth-child(1)").value = '';
-}
-
-// for (i = 0; i < nameArr.length; i++) {
-//     if (tableHTML === '') {
-//         tableHTML = `<td>${nameArr[i]}</td>`;
-//         document.querySelector('#fromJS').innerHTML = tableHTML;
-//     } else {
-//         document.querySelector('#fromJS').innerHTML = '';
-//         tableHTML += `<td>${nameArr[i]}</td>`;
-//         document.querySelector('#fromJS').innerHTML = tableHTML;
-//         break;
-//     }
-// }
-
-// const toTable = () => {
-
-//     // Loop through array and add table cells
-//     for (var i=0; i<nameArr.length; i++) {
-//         tableHTML += "<td>" + nameArr[i] + "</td><br>";
-
-//         // Break into next row
-//         var next = i+1;
-//         if (next%=0 && next!=nameArr.length) {
-//             tableHTML += "</tr><tr>";
-//         }
-//     }
-//     document.querySelector('#tableContainer').innerHTML = tableHTML;
-// }
-
-// console.log('are we getting here?')
-// document.querySelector('#fromJS').innerHTML = `<td>test</td>`;
-// for (i = 0; i < lastNames.length; i++) {
-//     if (document.querySelector('#fromJS').innerHTML === '') {
-//         document.querySelector('#fromJS').innerHTML = `<td class='last-names'>${lastNames[0]}</td> <td>${firstNames[0]}</td>`;
-//         // document.querySelector('#fromJS').innerHTML += `</tr>`
-//     } else {
-//         document.querySelector('#fromJS').innerHTML += `<tr>`;
-//         document.querySelector('#fromJS').innerHTML += `<td class='last-names'>${lastNames[i]}</td> <td>${firstNames[i]}</td>`;
-//     }
-// }

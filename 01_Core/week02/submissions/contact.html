@@ -7,20 +7,27 @@
         <link href='style.css' rel='stylesheet'>
     </head>
     <body>
-        
+
         <header class='contact-header'>
             <nav class='navbar'>
                 <ul class='ul-main'>
                     <li><a href='index.html'>Home</a></li>
-                    <li><a href=''>Socials</a></li>
                     <li><a href='contact.html'>Contact Us</a></li>
                     <li><a href='contact-list.html'>Contact List</a></li>
+                    <li class='partnerHover'><a href=''>Socials</a>
+                        <ul class='socialDrop'>
+                            <p><a href='https://www.twitter.com'>Twitter</a></li></p>
+                            <p><a href='https://www.facebook.com'>Facebook</a></li></p>
+                            <p><a href='https://www.instagram.com'>Instagram</a></p>
+                        </ul>
+                    </li>
                     <li class='partnerHover'><a href=''>Our Partners</a>
-                        <ul class='dropContent'>
+                        <ul class='partnerDrop'>
                             <p><a href='https://www.google.com'>Google</a></li></p>
                             <p><a href='https://www.yahoo.com'>Yahoo</a></li></p>
                             <p><a href='https://www.bing.com'>Bing</a></p>
-                        </ul></li> <!-- end dropdown content-->
+                        </ul>
+                    </li> <!-- end dropdown content-->
                 </ul> <!-- end ul main-->
             </nav>
 
@@ -31,7 +38,7 @@
         <h1>Contact Us!</h1>
 
         <div class='form'>
-            <form>
+            <form action='' method="GET">
                 <fieldset id='form-style'>
                     <br><br>
                     First Name: <input type='text' placeholder='John'>
@@ -42,9 +49,9 @@
 
                     <div class='form-input'>
                         Gender: <br>
-                        <input type='radio' name='gender'>Male<br>
-                        <input type='radio' name='gender'>Female<br>
-                        <input type='radio' name='gender'>Other<br>
+                        <input type='radio' name='gender'> Male<br>
+                        <input type='radio' name='gender'> Female<br>
+                        <input type='radio' name='gender'> Other<br>
                     </div>
 
                     <div class='form-input'>
@@ -63,14 +70,14 @@
                     <div class='form-input'>
                         Favorite Pizza Toppings:
                         <br>
-                        <input type='checkbox'>Pepperoni<br>
-                        <input type='checkbox'>Sausage<br>
-                        <input type='checkbox'>Bacon<br>
-                        <input type='checkbox'>Chicken<br>
-                        <input type='checkbox'>Onions<br>
-                        <input type='checkbox'>Jalapenos<br>
-                        <input type='checkbox'>Green Peppers<br>
-                        <input type='checkbox'>Extra Cheese
+                        <input type='checkbox'> Pepperoni<br>
+                        <input type='checkbox'> Sausage<br>
+                        <input type='checkbox'> Bacon<br>
+                        <input type='checkbox'> Chicken<br>
+                        <input type='checkbox'> Onions<br>
+                        <input type='checkbox'> Jalapenos<br>
+                        <input type='checkbox'> Green Peppers<br>
+                        <input type='checkbox'> Extra Cheese
                     </div>
 
                     <div class='form-input' id='submit-button'>
@@ -89,12 +96,13 @@
     </div> <!-- end contact page-->
 
     <footer class='footer'>
-        <p>&copy; 2020 Arthur McLean Evans</p>
         <ul>
             <li><a href='https://www.twitter.com'>Twitter</a></li>
             <li><a href='https://www.facebook.com'>Facebook</a></li>
             <li><a href='https://www.instagram.com'>Instagram</a></li>
         </ul>
+        <br>
+        <p>&copy; 2020 Arthur McLean Evans</p>
     </footer>
 
     <script src='script.js'></script>

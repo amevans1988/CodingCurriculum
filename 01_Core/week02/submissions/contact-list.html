@@ -12,15 +12,22 @@
             <nav class='navbar'>
                 <ul class='ul-main'>
                     <li><a href='index.html'>Home</a></li>
-                    <li><a href=''>Socials</a></li>
                     <li><a href='contact.html'>Contact Us</a></li>
                     <li><a href='contact-list.html'>Contact List</a></li>
+                    <li class='partnerHover'><a href=''>Socials</a>
+                        <ul class='socialDrop'>
+                            <p><a href='https://www.twitter.com'>Twitter</a></li></p>
+                            <p><a href='https://www.facebook.com'>Facebook</a></li></p>
+                            <p><a href='https://www.instagram.com'>Instagram</a></p>
+                        </ul>
+                    </li>
                     <li class='partnerHover'><a href=''>Our Partners</a>
-                        <ul class='dropContent'>
+                        <ul class='partnerDrop'>
                             <p><a href='https://www.google.com'>Google</a></li></p>
                             <p><a href='https://www.yahoo.com'>Yahoo</a></li></p>
                             <p><a href='https://www.bing.com'>Bing</a></p>
-                        </ul></li> <!-- end dropdown content-->
+                        </ul>
+                    </li> <!-- end dropdown content-->
                 </ul> <!-- end ul main-->
             </nav>
 
@@ -36,16 +43,21 @@
                     <tr>
                         <th id='firstName'>Last Name</th>
                         <th id='lastName'>First Name</th>
+                        <th></th>
                     </tr>
-                    <tr><td id='fromJS'></td></tr>
+                    <tr>
+                        <td id='lastJS'></td>
+                        <td id='firstJS'></td>
+                        <td id='deleteJS'></td>
+                    </tr>
 
                 </table>
-                <hr>
-
             </div>
 
+            <hr>
+
             <div id='nameInput'>
-                <input type='text' placeholder='John Smith,Jane Doe'>
+                <input id='textInput' type='text' placeholder='John Smith,Jane Doe'>
                 <br><br>
                 <input id='addName' type='submit' onclick='return addName()'>
             </div>
@@ -53,14 +65,16 @@
         </div><!-- end main-->
 
         <footer class='footer'>
-            <p>&copy; 2020 Arthur McLean Evans</p>
             <ul>
                 <li><a href='https://www.twitter.com'>Twitter</a></li>
                 <li><a href='https://www.facebook.com'>Facebook</a></li>
                 <li><a href='https://www.instagram.com'>Instagram</a></li>
             </ul>
+            <br>
+            <p>&copy; 2020 Arthur McLean Evans</p>
         </footer>
 
     </body>
     <script src='script.js'></script>
+    <script src='contactList.js'></script>
 </html>
