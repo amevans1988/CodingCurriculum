@@ -5,11 +5,65 @@
     padding: 0;
 }
 
+a:link {
+color: black;
+}
+
+a:visited {
+color: black;
+}
+
+a:hover {
+color: red;
+}
+
+.partnerDrop {
+    display: none;
+    position: absolute;
+    list-style: inside;
+    background: blue;
+    border-radius: 8px;
+    border: solid 1px black;
+    width: 131.6px;
+    margin-left: -20px;
+    /* padding: 0 20px;
+    margin: 0px 35px; */
+}
+
+.socialDrop {
+    display: none;
+    position: absolute;
+    list-style: inside;
+    background: blue;
+    border-radius: 8px;
+    border: solid 1px black;
+    width: 91.6px;
+    margin-left: -20px;
+    /* padding: 0 20px;
+    margin: 0px 35px; */
+}
+
+
+.partnerHover {
+    position: relative;
+}
+
+.partnerHover:hover .partnerDrop {
+    display: block;
+}
+
+.partnerHover:hover .socialDrop {
+    display: block;
+}
+
+
+
 body {
     margin: 20px;
     padding: 10px;
     font-family: Helvetica, Arial, sans-serif;
     background-color: rgb(18, 124, 124);
+    position: relative;
 }
 
 #contact-page {
@@ -27,7 +81,7 @@ body {
     padding: 10px 10px 10px;
     margin: 50px 10px 10px;
     border: solid 2px black;
-    background: rgb(15, 6, 151);
+    background: blue;
 }
 
 h1, h2, h3, h4 {
@@ -36,18 +90,17 @@ h1, h2, h3, h4 {
 }
 
 #form-style {
-    background: rgb(15, 6, 151);
+    background: blue;
 }
 
-#contact-header {
-    display: inline;
+.contact-header {
     margin: 5px auto;
     text-align: center;
 }
 
 header nav {
     text-align: center;
- }
+}
 
 header nav ul {
     margin: 0;
@@ -58,8 +111,21 @@ header nav ul {
 }
 
 header nav ul li {
+    background: blue;
+    border-radius: 8px;
+    border: solid 1px black;
     display: inline-block;
     padding: 0 20px;
+    margin: 5px;
+}
+
+/* .navbar ul li {
+    width: 150px;
+    border: solid 1px black;
+} */
+
+.navbar ul li a {
+    display: block;
 }
 
 .form {
@@ -73,25 +139,17 @@ header nav ul li {
     padding: 20px 5px 5px 178px;
 }
 
-/* #favorite-sport {
-    text-align: left;
-    padding: 0 0 0 178px;
-}
-
-#toppings {
-    text-align: left;
-    padding: 0 0 0 178px;
-} */
-
 .main {
     background: rgb(18, 124, 124);
     width: 700px;
     margin: 20px auto;
+    text-align: center;
 }
 
 .color-list {
     background-color: black;
     text-indent: 20px;
+    border: solid 2px blue;
 }
 
 #red {
@@ -123,7 +181,7 @@ header nav ul li {
 }
 
 .footer {
-    background: rgb(15, 6, 151);
+    background: blue;
     margin: 20px;
     padding: 20px;
     border: solid 2px black;
@@ -133,4 +191,77 @@ hr {
     margin: 10px;
 }
 
+#contact-table {
+    width: 280px;
+    padding: 10px;
+}
 
+.contact-main {
+    width: 700px;
+    margin: 100px auto 20px;
+    padding: 100px auto 20px;
+}
+
+table {
+    text-align: left;
+}
+
+th {
+    height: 50px;
+    padding: 0;
+    width: 300px;
+}
+
+tr {
+    height: 20px;
+    padding: 0 10px 0;
+}
+
+td {
+    text-align: left;
+}
+
+.tableEntries {
+    padding: 4px;
+}
+
+.deleteButtonEntries {
+    padding: 3px;
+}
+
+#nameInput {
+    text-align: left;
+    text-indent: 20px;
+}
+
+#addName {
+    margin: 0 0 0 20px;
+}
+
+#tableContainer {
+    margin: auto;
+    display: block;
+}
+
+.last-names {
+    width: 300px;
+    color: red;
+    font-weight: 800;
+}
+
+#lastName {
+    width: 300px;
+}
+
+#firstName {
+    width: 300px;
+}
+
+.delete-button {
+    text-align: right;
+}
+
+#deleteIcon {
+    vertical-align: middle;
+    margin: 0px 0px;
+}
