@@ -1,0 +1,8 @@
+/* CSS style sheet P1W3 */
+
+body [class='interior div1'] {
+    width: 100px;
+    height: 100px;
+    border: solid 1px black;
+}
+
