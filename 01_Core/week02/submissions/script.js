@@ -1,12 +1,11 @@
 // Dynamic contact list - This was a lot of fun.
 
-// No multiple names
-
 var tableLast = document.querySelector('#lastJS');
 var tableFirst = document.querySelector('#firstJS');
 var tableDelete = document.querySelector('#deleteJS');
 var nameInput;
 var fullNames = null;
+var newNames = [];
 
 function updateTable(nameInput) {
 
@@ -22,10 +21,10 @@ function updateTable(nameInput) {
     // 4 Clear the current first and last names array and clear table html
     resetTable();
 
-    // 5 With the array sorted by last name, take all current elements and split them into their first and last names while assigning an identical index in both arrays
+    // 5 With the namesLastFirst array sorted by last name, take all current elements and split them into two arrays by their first and last names while assigning an identical index in both arrays
     createFirstAndLast();
 
-    // 6 Based on the updated lastNames array, assigns 3 cells for each element in one row - last name from the looping array, first name with identical index, and then add a delete button assigned an id equal to that index.
+    // 6 Based on the updated lastNames array, assigns 3 cells for each element in one row - last name from the looping array, first name with identical index, and adds a delete button assigned an id equal to that index.
     addTable();
 }
 
@@ -37,6 +36,7 @@ const addName = () => {
 }
 
 const deleteName = (index) => {
+    // The master 'fullNames' list is not sorted alphabetically - finds the index of the deleted name in the master list.
     var indexToDelete = (fullNames.indexOf(`${firstNames[index]} ${lastNames[index]}`));
     fullNames.splice(indexToDelete, 1)
     nameInput = '';
@@ -47,11 +47,15 @@ const deleteName = (index) => {
     addTable();
 }
 
+
+
 const getValues = () => {
     if (nameInput === '') {
         alert('At least one name is required.');
-    } else if (nameInput.includes(', ')) {
-        alert('Please do not add a space after each comma.')
+    } else if (nameInput.includes(', ') || nameInput.includes(' ,')) {
+        alert('Please do not include a space before or after each comma.')
+    } else if (nameInput.includes('  ')) {
+        alert('Please do not add multiple spaces in the input field.')
     } else if (nameInput.indexOf(' ') >= 0) {
         if (fullNames === null) {
             fullNames = nameInput.split(',');
@@ -60,12 +64,38 @@ const getValues = () => {
             if (nameInput.includes(',')) {
                 addMultipleNames = nameInput.split(',')
                 for (i = 0; i < addMultipleNames.length; i++) {
-                    fullNames.push(addMultipleNames[i]);
+                        // Evaluates each name being added to prevent duplicates 
+                        for (k = 0; k < fullNames.length; k++) {
+                            if (addMultipleNames[i] == fullNames[k]) {
+                                alert(`${addMultipleNames[i]} is already on the contact list - Not added.`)
+                                // This break only stops comparing the current name to the master name list. The parent loop that evaluates each new name being added will continue.
+                                break;
+                            } else {
+                                // This loops can run many times over depending on the current name list and the amount of names attempting to be added. This ensures that each new name will only be added one time.
+                                if (newNames.includes(addMultipleNames[i]) || fullNames.includes(addMultipleNames[i])) {}
+                                else {
+                                    newNames.push(addMultipleNames[i])
+                                }
+                            }
+                        }
                 }
-            // If just adding one name to an existing contact list
             } else {
-                fullNames.push(nameInput)
+                    // Loops through the current name list to check for duplicates 
+                    for (i = 0; i < fullNames.length; i++) {
+                        if (fullNames[i] === nameInput) {
+                            alert(`${fullNames[i]} is already on the contact list.`);
+                            newName = null;
+                        } else {
+                            newName = nameInput;
+                        }
+                    }
+                    // Needs to be added outside of the loop to prevent infinite
+                    if (newName !== null) {
+                        fullNames.push(newName);
+                    }
             }
+            // If adding multiple names to an existing list - update the list with only the new names not currently present on the list. Duplicate names will not be added.
+            fullNames = fullNames.concat(newNames); 
         }
     // If the text entry does not contain at least one space
     } else {
@@ -113,7 +143,7 @@ const addTable = () => {
         } else {
             tableLast.innerHTML += `<p class='tableEntries'><span class='last-names'>${lastNames[i]}</span></p>`;
             tableFirst.innerHTML += `<p class='tableEntries'>${firstNames[i]}</p>`;
-            tableDelete.innerHTML += `<p class='deleteButtonEntries'><span class='delete-button'><button id=${i} onClick=deleteName(${i})><img id='deleteIcon' src="images/delete.png" width="15" height="15"></span></p>`;
+            tableDelete.innerHTML += `<p class='buttonEntries'><span class='delete-button'><button id=${i} onClick=deleteName(${i})><img id='deleteIcon' src="images/delete.png" width="15" height="15"></button></span></p>`;
         }
     }
 }
