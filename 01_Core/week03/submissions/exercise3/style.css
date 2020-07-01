@@ -52,12 +52,31 @@ html {
 } 
 
 [class='interior div5'] {
-    position: absolute;
-    background-color: red;
-    width: 35px;
-    height: 35px;
-    top: 32.5px;
-    right: 32.5px;
+    position: relative;
+    display: block;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-bottom-color: red;
+    left: 30px;
+    top: 10px;
 }
 
+[class='interior div5']:before {
+    position: relative;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: red;
+    left: -20px;
+    bottom: -20px;
+}
 
+[class='interior div5']:after {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%
+}
