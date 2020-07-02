@@ -1,0 +1,31 @@
+html {
+    margin: 10px;
+}
+
+.container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: solid 1px black;
+}
+
+[class='interior div1'] {
+} 
+
+[class='interior div2'] {
+
+} 
+
+[class='interior div3'] {
+
+} 
+
+[class='interior div4'] {
+
+} 
+
+[class='interior div5'] {
+}
+
+[class='interior div5']:after {
+}

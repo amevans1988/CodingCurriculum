@@ -52,6 +52,20 @@ html {
 } 
 
 [class='interior div5'] {
+    position: absolute;
+    background-color: red;
+    width: 35px;
+    height: 35px;
+    top: 32.5px;
+    right: 32.5px;
+    transform: rotate(45deg);
+}
+
+
+
+
+/* ............ */
+/* [class='interior div5'] {
     position: relative;
     display: block;
     width: 0;
@@ -72,4 +86,4 @@ html {
     border-top-color: red;
     left: -20px;
     bottom: -20px;
-}
+} */

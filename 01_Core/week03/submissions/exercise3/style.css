@@ -53,6 +53,35 @@ html {
 
 [class='interior div5'] {
     position: relative;
+    background-color: red;
+    width: 35px;
+    height: 35px;
+    top: 32.5px;
+    left: 32.5px;
+    transform: rotate(45deg);
+}
+
+[class='interior div5']:after {
+    display: block;
+    position: relative;
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    border-radius: 50%;
+    top: 10px;
+    left: 10px;
+    content: '\2605';
+    font-size: 7px;
+    text-align: center;
+    line-height: 15px;
+    transform: rotate(-45deg)
+}
+
+
+
+/* omg I made this so much harder than it needed to be...
+/* [class='interior div5'] {
+    position: relative;
     display: block;
     width: 0;
     height: 0;
@@ -60,23 +89,25 @@ html {
     border-bottom-color: red;
     left: 30px;
     top: 10px;
-}
+} */
 
-[class='interior div5']:before {
+/* [class='interior div5']:after {
     position: relative;
     display: block;
-    content: '';
+    font-size: 5px;
+    text-indent: -2.5px;
+    content: '\2605';
     width: 0;
     height: 0;
     border: 20px solid transparent;
     border-top-color: red;
     left: -20px;
     bottom: -20px;
-}
+} */
 
-[class='interior div5']:after {
+/* [class='interior div5']:after {
     width: 100px;
     height: 100px;
     background: red;
     border-radius: 50%
-}
+} */

@@ -1,0 +1,66 @@
+html {
+    margin: 10px;
+}
+
+.container {
+    position: absolute;
+    display: grid;
+    width: 115px;
+    height: 180px;
+    border: solid 1px black;
+    padding: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+[class='interior div1']::before {
+    position: relative;
+    background-color: rgb(39, 31, 31);
+    display: block;
+    content: '';
+    grid-row: 1;
+    text-indent: 20px;
+    width: 30px;
+    height: 30px;
+
+} 
+
+[class='interior div1'] {
+    position: relative;
+    background-color: red;
+    display: block;
+    grid-row: 1;
+    width: 30px;
+    height: 30px;
+    right: 20px;
+} 
+
+[class='interior div1']::after {
+    position: absolute;
+    background-color: rgb(196, 172, 172);
+    grid-column: 26;
+    display: block;
+    right: 50px;
+    content: '';
+    left: 50px;
+    width: 30px;
+    height: 30px;
+} 
+
+[class='interior div2'] {
+
+} 
+
+[class='interior div3'] {
+
+} 
+
+[class='interior div4'] {
+
+} 
+
+[class='interior div5'] {
+}
+
+[class='interior div5']:after {
+}
