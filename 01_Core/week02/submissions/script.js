@@ -85,6 +85,8 @@ const getValues = () => {
                         if (fullNames[i] === nameInput) {
                             alert(`${fullNames[i]} is already on the contact list.`);
                             newName = null;
+                            // Break out of the loop after the single name is matched
+                            break;
                         } else {
                             newName = nameInput;
                         }

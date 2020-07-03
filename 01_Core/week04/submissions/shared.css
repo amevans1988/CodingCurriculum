@@ -1,0 +1,27 @@
+/* Shared CSS */
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.main-header__logo {
+    color: red;
+    align-items: center;
+    display: flex;
+}
+
+.logo p {
+    display: inline;
+}
+
+.main__navbar {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.navbar__li {
+    list-style: none;
+    display: inline;
+}
