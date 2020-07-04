@@ -11,23 +11,109 @@
         <link href='normalize.css' rel='stylesheet'>
         <link href='shared.css' rel='stylesheet'>
         <link href='main.css' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 
     </head>
-
     <body>
+        <div class='background'></div>
         <header>
-            <div class='main-header__logo'>
-                <a href='#'>Picture Here</a>
+            <div class='logo'>
+                <img src='images/redgamersmain.png'>
             </div>
-            <nav class='main-navbar'>
+            <nav class='navbar'>
                 <ul>
-                    <li class='navbar__li'><a href:'#'>All Products</a></li>
-                    <li class='navbar__li'><a href:'#'>Categories</a></li>
-                    <li class='navbar__li'><a href:'#'>Contact Us </a></li>
-                    <li class='navbar__li'><a href:'#'>Search</a></li>
+                    <li class='navbar__search'>
+                        <a href='#'>Search</a>
+                        <ul class='searchDrop'>
+                            <form action='search.html'>
+                                <input id='searchText' type='text' placeholder='What are you looking for?'>
+                                <br><br>
+                                <input type='submit' value="Search" onclick='return getSearchResults()'>
+                            </form>
+                        </ul>
+                    </li>
+                    <li class='navbar__categories'>
+                        <a href='#'>Categories</a>
+                        <ul class='categoryDrop'>
+                            <p><a href='#'>-Desktops</a></li></p>
+                            <p><a href='#'>-Laptops</a></li></p>
+                            <p><a href='#'>-Headsets</a></p>
+                            <p id='last'><a href='#'>-Mice</a></p>
+                        </ul>
+                    </li>
+                    <li class='navbar__li'>
+                        <a href='#'>All Products</a>
+                    </li>
+                    <li class='navbar__li'>
+                        <a href='#'>About Us</a>
+                    </li>
+                    <li class='navbar__li'>
+                        <a href='#'>Contact Us</a>
+                    </li>
                 </ul>
             </nav>
+
+            <div class='cart-logo'>
+                <a href='cart.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </div>
+
+            </div>
         </header>
+
+        <div class='main'>
+            <!-- <div class='test'>
+                <p>test</p>
+            </div> -->
+
+            <div class='image-slider'>
+                <img>Product Pic 1
+                <img>Product Pic 2
+                <img>Product Pic 3
+                <img>Product Pic 4
+            </div>
+
+            <div class='main__products'>
+                <h2>Products</h2>
+                <p>Category 1</p>
+                <p>Category 2</p>
+                <p>Category 2</p>
+                <p>Category 2</p>
+            </div>
+
+            <hr>
+
+            <div class='main__aboutus'>
+                <h2>About Us</h2>
+                <img src=''>Gamer Picture
+                <p>Content</p>
+            </div>
+
+            <hr>
+
+            <div class='main__testimonials'>
+                <h2>Our Customers</h2>
+                <p>Cust 1</p>
+                <p>Cust 1</p>
+                <p>Cust 1</p>
+            </div>
+        </div>
+
+        <footer>
+            <hr>
+            <h4>RedGamers</h4>
+            <ul>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                <li>Contact Us</li>
+                <li>Careers</li>
+            </ul>
+
+            <br><br>
+
+            <p>&copy; 2020 RedGamers</p>
+
+        </footer>
+
     </body>
     <script src='script.js'></script>
 </html>

@@ -1,27 +1,151 @@
 /* Shared CSS */
+* {
+    box-sizing: border-box;
+}
+
+.background {
+    margin: 0;
+    background: url(images/background.jpg) center/cover;
+    filter: grayscale(40%);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+    
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: rgb(175, 26, 26);
+    border: solid 2px black;
+    border-radius: 15px;
+    padding: 2px 3px;
+}
 
 header {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-}
-
-.main-header__logo {
-    color: red;
-    align-items: center;
-    display: flex;
-}
-
-.logo p {
-    display: inline;
-}
-
-.main__navbar {
+    width: 100%;
+    position: fixed;
     display: inline-block;
-    vertical-align: middle;
+    padding: 0px 16px;
+    font-family: 'Orbitron', sans-serif;
+    background-color: white;
+    z-index: 100;
+}
+
+.logo {
+    display: inline-block;
+}
+
+.cart-logo {
+    position: absolute;
+    display: inline-block;
+    background: url(images/normalcart.png) no-repeat;
+    width: 30px;
+    height: 20px;
+    right: 1%;
+    top: 22px;
+}
+
+.cart-logo:hover {
+    background: url(images/hovercart.png) no-repeat;
+}
+
+.cart-logo a:hover {
+    border: none;
+}
+
+.navbar {
+    position: absolute;
+    display: inline-block;
+    text-align: right;
+    bottom: 15%;
+    width: calc(90% - 60px);
 }
 
 .navbar__li {
     list-style: none;
     display: inline;
+    padding: 15px;
+}
+
+.navbar__search {
+    position: relative;
+    list-style: none;
+    display: inline;
+    padding: 15px;
+}
+
+.navbar__search a:hover {
+    padding: 0;
+    border: none;
+}
+
+.navbar__search:hover .searchDrop {
+    display: block;
+}
+
+.searchDrop {
+    position: absolute;
+    display: none;
+    padding: 10px;
+    top: 45px;
+    left: 0px;
+    font-size: .8em;
+    text-align: left;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 15px;
+}
+
+.navbar__categories {
+    position: relative;
+    list-style: none;
+    display: inline;
+    padding: 5px 15px 15px;
+}
+
+.navbar__categories:hover {
+    padding-bottom: 145px;
+    border: solid 2px black;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.navbar__categories a:hover {
+    border: none;
+    padding: 0;
+}
+
+.navbar__categories:hover .categoryDrop {
+    display: block;
+}
+
+#last {
+    margin-bottom: 3px;
+}
+
+.categoryDrop {
+    background: white;
+    position: absolute;
+    display: none;
+    text-align: left;
+    right: 21px;
+    padding: 0;
+}
+
+.categoryDrop a:hover {
+    border: none;
+    padding: 0;
+}
+
+footer {
+    position: relative;
+    top: 86px;
 }

@@ -1,1 +1,21 @@
 /* main.css */
+
+.main {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    top: 86px;
+}
+
+.image-slider {
+    position: relative;
+    background-color: white;
+    width: 500px;
+    height: 400px;
+    margin: 0px auto;
+
+}
+
+
+
+

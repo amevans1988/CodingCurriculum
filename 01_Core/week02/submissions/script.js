@@ -66,7 +66,7 @@ const getValues = () => {
                 for (i = 0; i < addMultipleNames.length; i++) {
                         // Evaluates each name being added to prevent duplicates 
                         for (k = 0; k < fullNames.length; k++) {
-                            if (addMultipleNames[i] == fullNames[k]) {
+                            if (addMultipleNames[i] == fullNames[k]) {  
                                 alert(`${addMultipleNames[i]} is already on the contact list - Not added.`)
                                 // This break only stops comparing the current name to the master name list. The parent loop that evaluates each new name being added will continue.
                                 break;
@@ -98,6 +98,7 @@ const getValues = () => {
             }
             // If adding multiple names to an existing list - update the list with only the new names not currently present on the list. Duplicate names will not be added.
             fullNames = fullNames.concat(newNames); 
+            newNames = [];
         }
     // If the text entry does not contain at least one space
     } else {

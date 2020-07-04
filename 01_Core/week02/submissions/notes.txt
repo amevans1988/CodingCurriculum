@@ -1,0 +1,1 @@
+Idea for master name list. Independent window that scrolls on a set height and width, does not expand the entire website.
