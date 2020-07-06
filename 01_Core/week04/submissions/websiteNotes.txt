@@ -1,0 +1,10 @@
+Website to do
+
+change all font sizes to rem (or em if necessary)
+
+Possible changes to other elements with em, but prob not
+
+"first of type"
+
+-Javascript to add the header and footer to any website without having to add the html.
+-Query selector for a div the html
