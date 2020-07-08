@@ -10,8 +10,10 @@
 .image-slider {
     position: relative;
     background-color: white;
-    width: 500px;
-    height: 400px;
+    width: 80vw;
+    height: 40vh;
+    max-width: 500px;
+    max-height: 400px;
     margin: 0px auto;
 }
 
