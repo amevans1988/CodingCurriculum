@@ -1,17 +1,66 @@
 /* Products CSS */
 
+h3 {
+    text-decoration: underline;
+}
+
 .products-main {
-    margin: 50px auto 10px;
+    margin: 100px auto 10px;
     text-align: center;
     width: 80vw;
 }
 
-.radio-buttons {
+#searchBox {
+    margin-right: 10px;
+}
+
+.product-selection {
     display: inline-block;
     margin-top: 20px;
 }
 
+.items {
+    display: inline-block;
+    font-size: .8rem;
+    margin: 10px;
+    max-width: 30vw;
+}
+
+.items a:hover {
+    border: none;
+    padding: 0;
+}
+
+.items img {
+    display: inline-block;
+    width: 35vw;
+}
+
+.items p {
+    display: block;
+}
+
+.price {
+    color: red;
+}
+
 .filter-button {
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 10px;
+}
+
+@media (min-width: 50rem) {
+    .products {
+        margin: 30px 50px;
+        text-align: left;
+    }
+    .products-main {
+        width: 95vw;
+    }
+    .items {
+        max-width: 15vw;
+    }
+    .items img {
+        width: 12vw;
+    }
 }

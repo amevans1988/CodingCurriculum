@@ -13,7 +13,7 @@ document.querySelector('.header-div').innerHTML = `
             <nav class='navbar'>
                 <ul>
                     <li class='navbar__search'>
-                        <a href='search.html'>Search</a>
+                        <a href='products.html'>Search</a>
                         <ul class='searchDrop'>
                             <form action='search.html'>
                                 <input id='searchText' type='text' placeholder='What are you looking for?'>
@@ -23,19 +23,19 @@ document.querySelector('.header-div').innerHTML = `
                         </ul>
                     </li>
                     <li class='navbar__categories'>
-                        <a href='#'>Categories</a>
+                        <a href='products.html'>Categories</a>
                         <ul class='categoryDrop'>
-                            <p><a href='#'>Desktops</a></li></p>
-                            <p><a href='#'>Laptops</a></li></p>
-                            <p><a href='#'>Headsets</a></p>
-                            <p id='last'><a href='#'>Mice</a></p>
+                            <p><a href='products.html'>Desktops</a></li></p>
+                            <p><a href='products.html'>Laptops</a></li></p>
+                            <p><a href='products.html'>Headsets</a></p>
+                            <p id='last'><a href='products.html'>Mice</a></p>
                         </ul>
                     </li>
                     <li class='navbar__li'>
-                        <a href='#'>All Products</a>
+                        <a href='products.html'>All Products</a>
                     </li>
                     <li class='navbar__li'>
-                        <a href='#'>Contact Us</a>
+                        <a href='contactus.html'>Contact Us</a>
                     </li>
                 </ul>
             </nav>
@@ -76,7 +76,7 @@ document.querySelector('.header-div').innerHTML = `
 
 document.querySelector('.footer-div').innerHTML =`
         <footer>
-            <hr>
+            <div class='break'></div>
             <h4><span class='redtext'>Red</span>Gamers</h4>
             <ul class='footer-bottom'>
                 <li>&copy; 2020 RedGamers</li>

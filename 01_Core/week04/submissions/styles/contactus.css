@@ -1,0 +1,32 @@
+/* Contact Us CSS */
+
+html {
+    margin: 10px auto;
+}
+
+h2 {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.contact-form {
+    position: relative;
+    text-align: center;
+    width: 85vw;
+    margin: 10px auto;
+    border: solid 2px black;
+}
+
+.form-input {
+    padding: 5px 0;
+}
+
+.radio-button {
+    margin: 0 5px 0;
+}
+
+@media (min-width: 50rem) {
+    .contact-form {
+        width: 50vw;
+    }
+}

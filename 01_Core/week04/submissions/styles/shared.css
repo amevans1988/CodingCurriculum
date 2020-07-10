@@ -152,14 +152,14 @@ header {
 .navbar__li {
     list-style: none;
     display: inline;
-    padding: 7px;
+    padding: 0 15px;
 }
 
 .navbar__search {
     position: relative;
     list-style: none;
     display: inline;
-    padding: 5px 5px 30px;
+    padding: 5px 15px 30px;
 }
 
 .navbar__search a:hover {
@@ -178,11 +178,11 @@ header {
     padding: 15px;
     top: 45px;
     left: 0px;
-    font-size: .5em;
+    font-size: .8em;
     text-align: left;
     background-color: white;
     border: solid 2px rgb(175, 26, 26);
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 .navbar__categories {
