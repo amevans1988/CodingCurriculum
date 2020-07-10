@@ -1,0 +1,17 @@
+/* Products CSS */
+
+.products-main {
+    margin: 50px auto 10px;
+    text-align: center;
+    width: 80vw;
+}
+
+.radio-buttons {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.filter-button {
+    display: inline-block;
+    margin-left: 20px;
+}

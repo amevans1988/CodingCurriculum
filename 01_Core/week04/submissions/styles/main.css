@@ -1,0 +1,246 @@
+/* main.css */
+
+.main {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    top: 86px;
+    height: 100vh;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 80vw;
+    position: relative;
+    display: block;
+    margin: auto auto 20px;
+}
+
+.slideshow-container a:hover {
+    border: none;
+    padding: 0;
+}
+
+    /* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+    /* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    /* padding: 16px; */
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+    /* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    }
+
+    /* Caption text */
+.text {
+    color: red;
+    padding: 2px;
+    background-color:rgba(211, 204, 204, 0.9);
+    font-size: 15px;
+    position: absolute;
+    bottom: -35px;
+    width: 80%;
+    text-align: center;
+    left: 10%;
+    }
+
+    /* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 10px 2px 0;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+    /* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/* What does this do?  Ask Tyler*/
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.main-logo {
+    position: relative;
+    width: 80vw;
+    padding: 30px 0;
+    margin: 0 auto;
+}
+
+.main__products, .main__aboutus {
+    position: relative;
+    display: block;
+    width: 100vw;
+    margin: 0px auto;
+}
+
+.main__testimonials {
+    display: block;
+}
+
+.main__products {
+    max-width: 70vw;
+    display: inline-block;
+    /* border-top: solid 1px black; */
+}
+
+.main__products img {
+    max-width: 30vw;
+    /* margin-bottom: 35px; */
+}
+
+.main__products a:hover {
+    border: none;
+    padding: 0;
+}
+
+.categories {
+    display: inline-block;
+    padding: 3px;
+    border: solid 1px black;
+    border-radius: 5px;
+    margin: 5px
+}
+
+.aboutus {
+    max-width: 75vw;
+    margin: 10px auto;
+    font-size: 1rem;
+
+}
+
+.aboutus img {
+    border: solid 2px red;
+    max-width: 65vw;
+}
+
+.customers {
+    margin: 0 15px 40px;
+    position: relative;
+}
+
+.reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.reverse .quote {
+    top: 0;
+}
+
+.customers p {
+    margin-right: 30px;
+}
+
+.customers h3 {
+    width: 20vw;
+    margin: 10px auto;
+    background-color: rgba(189, 181, 181, 0.6);
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.customers img {
+    border: solid 2px black;
+}
+
+@media (min-width: 50rem) {
+    .slideshow-container {
+        max-width: 50vw;
+    }
+    .main-logo {
+        max-width: 45vw;
+    }
+    .main__products {
+        display: inline-block;
+    }
+    .main__products img {
+        max-width: 30vw;
+    }
+    .aboutus img {
+        max-width: 45vw;
+    }
+    .customers img {
+        margin: 0 30px 0 0;
+    }
+    .customers p {
+        position: relative;
+        background-color: rgba(189, 181, 181, 0.6);
+        border: solid 1px  black;
+        border-radius: 5px;
+    }
+    .quote {
+        display: inline-block;
+        top: -100px;
+        width: 30vw;
+        text-align: left;
+        padding: 5px;
+    }
+
+    .sig {
+        display: block;
+        position: absolute;
+        top: -110px;
+        left: 600px;
+        width: 20vw;
+    }
+}
+
+
