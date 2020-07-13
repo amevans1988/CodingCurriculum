@@ -47,13 +47,6 @@ a:visited {
     color: black;
 }
 
-a:hover {
-    color: rgb(175, 26, 26);
-    border: solid 2px black;
-    border-radius: 15px;
-    padding: 2px 3px;
-}
-
 header {
     width: 100%;
     position: fixed;
@@ -150,21 +143,34 @@ header {
 }
 
 .navbar__li {
+    position: relative;
     list-style: none;
-    display: inline;
-    padding: 0 15px;
+    display: inline-block;
+    top: 25px;
+    border: solid 2px transparent;
+    border-radius: 15px;
+    padding: 2px 3px;
+    margin: 0 5px;
 }
+
+.navbar__li:hover {
+    border: solid 2px rgb(175, 26, 26);
+}
+
 
 .navbar__search {
     position: relative;
     list-style: none;
-    display: inline;
-    padding: 5px 15px 30px;
+    top: 25px;
+    display: inline-block;
+    border: solid 2px transparent;
+    border-radius: 15px;
+    padding: 2px 3px;
+    margin: 0 5px 20px;
 }
 
-.navbar__search a:hover {
-    padding: 0;
-    border: none;
+.navbar__search:hover {
+    border: solid 2px rgb(175, 26, 26);
 }
 
 .navbar__search:hover .searchDrop {
@@ -174,7 +180,7 @@ header {
 .searchDrop {
     position: absolute;
     display: none;
-    margin-top: -5px;
+    margin-top: -20px;
     padding: 15px;
     top: 45px;
     left: 0px;
@@ -188,19 +194,23 @@ header {
 .navbar__categories {
     position: relative;
     list-style: none;
-    left: 5px;
     display: inline;
-    padding: 5px 5px 15px;
+    top: 25px;
+    border: solid 2px transparent;
+    border-radius: 15px;
+    padding: 8px;
+    margin: 0 5px;
 }
 
 .navbar__categories:hover {
-    padding-bottom: 145px;
+    padding-bottom: 150px;
     border: solid 2px rgb(175, 26, 26);
     background-color: white;
     border-radius: 15px;
 }
 
 .navbar__categories a:hover {
+    color: rgb(175, 26, 26);
     border: none;
     padding: 0;
 }
@@ -220,6 +230,7 @@ header {
     text-align: left;
     right: 21px;
     padding: 0;
+    bottom: 12px;
 }
 
 .categoryDrop a:hover {

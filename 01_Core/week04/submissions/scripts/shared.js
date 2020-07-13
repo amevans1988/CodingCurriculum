@@ -25,10 +25,10 @@ document.querySelector('.header-div').innerHTML = `
                     <li class='navbar__categories'>
                         <a href='products.html'>Categories</a>
                         <ul class='categoryDrop'>
-                            <p><a href='products.html'>Desktops</a></li></p>
-                            <p><a href='products.html'>Laptops</a></li></p>
-                            <p><a href='products.html'>Headsets</a></p>
-                            <p id='last'><a href='products.html'>Mice</a></p>
+                            <p><a href='products.html'>-Desktops</a></li></p>
+                            <p><a href='products.html'>-Laptops</a></li></p>
+                            <p><a href='products.html'>-Headsets</a></p>
+                            <p id='last'><a href='products.html'>-Mice</a></p>
                         </ul>
                     </li>
                     <li class='navbar__li'>

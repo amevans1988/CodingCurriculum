@@ -1,5 +1,5 @@
 // JS for contactus.html
 
-const submitForm = () => {
-    event.preventDefault();
-}
+// const submitForm = () => {
+//     event.preventDefault();
+// }
