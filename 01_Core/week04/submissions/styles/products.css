@@ -51,16 +51,16 @@ h3 {
 
 @media (min-width: 50rem) {
     .products {
-        margin: 30px 50px;
+        margin: 30px auto;
         text-align: left;
     }
     .products-main {
-        width: 95vw;
+        width: 90vw;
     }
     .items {
         max-width: 15vw;
     }
     .items img {
-        width: 12vw;
+        width: 16vw;
     }
 }

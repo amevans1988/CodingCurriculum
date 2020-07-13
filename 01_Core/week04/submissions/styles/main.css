@@ -174,15 +174,9 @@
     position: relative;
 }
 
-.reverse {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-}
-
 .reverse .quote {
     top: 0;
-}
+} cx
 
 .customers p {
     margin-right: 30px;
@@ -208,24 +202,39 @@
     .main-logo {
         max-width: 45vw;
     }
+
     .main__products {
         display: inline-block;
     }
+
     .main__products img {
         max-width: 30vw;
     }
     .aboutus img {
         max-width: 45vw;
     }
+    
     .customers img {
         margin: 0 30px 0 0;
     }
+
     .customers p {
         position: relative;
         background-color: rgba(189, 181, 181, 0.6);
         border: solid 1px  black;
         border-radius: 5px;
     }
+
+    .reverse {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .reverse p {
+        margin-right: 30px;
+    }
+
     .quote {
         display: inline-block;
         top: -100px;
