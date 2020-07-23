@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Products Page</title>
+
+        <link href='styles/normalize.css' rel='stylesheet'>
+        <link href='styles/shared.css' rel='stylesheet'>
+        <link href='styles/products.css' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header-div"></div>
+
+        <main>
+            <h1>Product List</h1>
+
+            <div class="search-box">
+                <input type="text" id="searchBox" placeholder="Search for a specific item">
+                <input type="submit" value='Search'>
+            </div>
+
+            <div class="filter">
+                <form action='#'>
+                    <div class="product-selection">
+                        <select name="product-type" id="product-type">
+                            <option value="" disabled selected>Product-Type</option>
+                            <option value="desktops">Desktops</option>
+                            <option value="laptops">Laptops</option>
+                            <option value="headsets">Headsets</option>
+                            <option value="mice">Mice</option>
+                        </select>
+                    </div>
+                    <div class="filter-button">
+                        <button type='button'>Filter</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="products">
+                <div class="desktops">
+                    <h2>Desktops</h2>
+                    <div class='items'>
+                        <a href='productdetails.html'><img src='images/desktops/desk_product1/pic1.png'></a>
+                        <p>Wyse 3040 Thin Client</p>
+                        <p class='price'>$378</p>
+                    </div>
+                    <div class='items'>
+                        <a href='productdetails.html'><img src='images/desktops/desk_product2/pic1.jpg'></a>
+                        <p>SkyTech Archangel Gaming Desktop </p>
+                        <p class='price'>$1199</p>
+                    </div>
+                    <div class='items'>
+                        <a href='productdetails.html'><img src='images/desktops/desk_product3/pic1.jpg'></a>
+                        <p>ABS Prism S</p>
+                        <p class='price'>$2499</p>
+                    </div>
+                    <div class='items'>
+                        <a href='productdetails.html'><img src='images/desktops/desk_product4/pic1.jpg'></a>
+                        <p>CLX SET Gaming Desktop</p>
+                        <p class='price'>$4799</p>
+                    </div>
+                </div>
+
+                <div class="laptops">
+                    <h2>Laptops</h2>
+                    <div class='items'>
+                        <a href='productdetails.html'><img src='images/laptops/laptop_prod1/pic1.jpg'></a>
+                        <p>Lenovo IdeaPad Chromebook</p>
+                        <p class='price'>$359</p>
+                    </div>
+                    <div class='items'>
+                        <a href='productdetails.html'><img src='images/laptops/laptop_prod2/pic1.jpg'></a>
+                        <p>MSI Bravo</p>
+                        <p class='price'>$929</p>
+                    </div>
+                    <div class='items'>
+                        <a href='productdetails.html'><img src='images/laptops/laptop_prod3/pic1.jpg'></a>
+                        <p>ASUS Rog Strix Scar III</p>
+                        <p class='price'>$2449</p>
+                    </div>
+                    <div class='items'>
+                        <a href='productdetails.html'><img src='images/laptops/laptop_prod4/pic1.jpg'></a>
+                        <p>GIGABYTE AERO 15</p>
+                        <p class='price'>$3499</p>
+                    </div>
+                </div>
+
+                <div class="headsets">
+                    <h2>Headsets</h2>
+                    <div class='items'>
+                        <a href='productdetails.html'><img src='images/headsets/headset_prod1/pic1.jpg'></a>
+                        <p>Jabra Evolve 20 SE</p>
+                        <p class='price'>$65</p>
+                    </div>
+                    <div class='items'>
+                        <a href='productdetails.html'><img src='images/headsets/headset_prod2/pic1.jpg'></a>
+                        <p>HyperX Cloud Stinger</p>
+                        <p class='price'>$50</p>
+                    </div>
+                    <div class='items'>
+                        <a href='productdetails.html'><img src='images/headsets/headset_prod3/pic1.jpg'></a>
+                        <p>ASUS ROG Delta White Edition</p>
+                        <p class='price'>$155</p>
+                    </div>
+                    <div class='items'>
+                        <a href='productdetails.html'><img src='images/headsets/headset_prod4/pic1.jpg'></a>
+                        <p>CORSAIR VIRTUOSO RGB WIRELESS</p>
+                        <p class='price'>$268</p>
+                    </div>
+                </div>
+
+                <div class="mice">
+                    <h2>Mice</h2>
+                    <div class='items'>
+                        <a href='productdetails.html'><img src='images/mice/mouse_prod1/pic1.jpg'></a>
+                        <p>Dell Wyse Mouse</p>
+                        <p class='price'>$15.47</p>
+                    </div>
+                    <div class='items'>
+                        <a href='productdetails.html'><img src='images/mice/mouse_prod2/pic1.jpg'></a>
+                        <p>Corsair HARPOON RGB</p>
+                        <p class='price'>$65</p>
+                    </div>
+                    <div class='items'>
+                        <a href='productdetails.html'><img src='images/mice/mouse_prod3/pic1.jpg'></a>
+                        <p>Glorious Model O Minus</p>
+                        <p class='price'>$98</p>
+                    </div>
+                    <div class='items'>
+                        <a href='productdetails.html'><img src='images/mice/mouse_prod4/pic1.jpg'></a>
+                        <p>G-Wolves Hati HT-M 3360</p>
+                        <p class='price'>$206</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        
+        <div class="footer-div"></div>
+    </body>
+    <script src='scripts/shared.js'></script>
+    <!-- <script src='scripts/products.js'></script> -->
+</html>

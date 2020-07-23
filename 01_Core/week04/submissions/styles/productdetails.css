@@ -1,0 +1,32 @@
+/* CSS for product details */
+
+
+main {
+    margin-top: 150px;
+    padding: 10px;
+}
+
+h2 {
+    color: red;
+}
+
+.images img {
+    max-width: 80vw;
+}
+
+.add-to-cart {
+    font-size: 1.8rem;
+}
+
+.customize {
+    margin: 15px 0;
+}
+
+@media (min-width: 50rem) {
+    .images img {
+        max-width: 30vw;
+    }
+    .add-to-cart {
+        font-size: 1.3rem;
+    }
+}

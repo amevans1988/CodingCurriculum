@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us</title>
+
+        <link href='styles/normalize.css' rel='stylesheet'>
+        <link href='styles/shared.css' rel='stylesheet'>
+        <link href='styles/contactus.css' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header-div"></div>
+
+        <main>
+            <h1>Contact Us</h1>
+
+            <div class="contact-form">
+                <form action='#'>
+                    <div class="form-input">
+                        <p class='text-left'>Name: <input class='text-right' type='text'  placeholder="John Smith" required></p>
+                        <p>Email: <input type='email'  placeholder="jsmith@gmail.com" required></p>
+                        <p>Phone Number: <input type='tel'  placeholder="555-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></p>
+                    </div>
+                    <div class='form-input'>
+                        <p>Preferred Contact Method:</p>
+                        <input class='radio-button' type='radio' name='contact-method'> Email
+                        <input class='radio-button' type='radio' name='contact-method'> Text
+                        <input class='radio-button' type='radio' name='contact-method'> Phone Call
+                    </div>
+                    <div class='form-input flex'>
+                        <p>How did you hear about us:</p>
+                        <label><input class='checkbox' type='checkbox'> Gaming Event</label>
+                        <label><input class='checkbox' type='checkbox'> TV</label>
+                        <label><input class='checkbox' type='checkbox'> Radio</label>
+                        <label><input class='checkbox' type='checkbox'> Word of Mouth</label>
+                        <label><input class='checkbox' type='checkbox'> Other</label>
+                    </div>
+                    <div class="form-input">
+                        <p>Comments:</p>
+                        <textarea required></textarea>
+                    </div>
+                    <div class='form-input' id='submit-button'>
+                        <input type='submit' value='Send' onclick='return submitForm()'>
+                        <input type='reset' value='Reset'>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <div class="footer-div"></div>
+    </body>
+    <script src='scripts/contactus.js'></script>
+    <script src='scripts/shared.js'></script>
+</html>
