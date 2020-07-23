@@ -1,12 +1,5 @@
 /* main.css */
 
-main {
-    position: relative;
-    text-align: center;
-    margin: auto;
-    top: 86px;
-    height: 100%;
-}
 
 /* Slideshow container */
 .slideshow-container {
@@ -104,7 +97,8 @@ main {
     animation-duration: 1.5s;
 }
 
-/* What does this do?  Ask Tyler*/
+/* What does this do? 
+***** RESEARCH AND FIGURE THIS ISH OUT SAAS/WEBKIT */
 @-webkit-keyframes fade {
     from {opacity: .4}
     to {opacity: 1}

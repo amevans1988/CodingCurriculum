@@ -25,6 +25,17 @@ h2 {
     margin: 0 5px 0;
 }
 
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+
+.flex ul li {
+    list-style: none;
+}
+
 @media (min-width: 50rem) {
     .contact-form {
         width: 50vw;

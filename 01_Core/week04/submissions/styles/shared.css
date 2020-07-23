@@ -3,6 +3,13 @@
     box-sizing: border-box;
 }
 
+main {
+    position: relative;
+    text-align: center;
+    margin-top: 86px;
+    height: 100%;
+}
+
 html {
     font-family: 'Orbitron', sans-serif;
 }
